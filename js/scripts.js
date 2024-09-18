@@ -80,3 +80,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// MODALES //
+document.querySelectorAll('.service-list li').forEach(item => {
+    item.addEventListener('click', function() {
+        // Remover la clase 'clicked' de todos los elementos
+        document.querySelectorAll('.service-list li').forEach(li => {
+            li.classList.remove('clicked');
+        });
+        // Añadir la clase 'clicked' al elemento actual
+        this.classList.add('clicked');
+
+        // Obtener el id del modal de información
+        const targetModal = this.getAttribute('data-target');
+        const infoModal = document.getElementById(targetModal);
+        infoModal.style.display = 'flex'; // Mostrar modal de información
+    });
+});
+
+// Cerrar modales de información
+document.querySelectorAll('.close-info').forEach(closeButton => {
+    closeButton.addEventListener('click', function() {
+        this.closest('.info-modal').style.display = 'none';
+    });
+});
+
+// Cerrar modales generales
+document.querySelectorAll('.close').forEach(closeButton => {
+    closeButton.addEventListener('click', function() {
+        this.closest('.modal').style.display = 'none';
+    });
+});
+
+// sobre mi //
+// Cambia el color del título al hacer scroll
+window.addEventListener('scroll', function() {
+    const title = document.getElementById('about-title');
+    if (window.scrollY > 100) {
+        title.style.color = '#28a745'; // Verde al hacer scroll
+    } else {
+        title.style.color = '#007bff'; // Azul original
+    }
+});
+
+

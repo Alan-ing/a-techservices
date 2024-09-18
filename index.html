@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Tech Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Awesome Icons -->
+</head>
+
+<body>
+
+    <div class="loader_bg">
+   <div class="loader"><img src="img/loading.gif" alt="#" /></div>
+   <h1>PAGINA EN CREACION</h1>
+</div>
+    <!--html DEL HEADER-->
+    <header>
+        <div class="header-content">
+            <h1>Reparación de Celulares y Laptops</h1>
+            <p>Solucion rápida y confiable para tus dispositivo.</p>
+        </div>
+    </header>
+
+
+    <!-- HTML DEL NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-black fixed-top desktop-navbar">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse show" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex flex-row justify-content-end w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comenta.html">Comentarios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <h2 id="services-title">Servicios Activos</h2>
+
+    <section id="services" class="text-center">
+        
+
+        <div class="service" id="phone-repair" data-modal="phone-modal">
+            <div class="service-icon">
+                <i class="fas fa-mobile-alt fa-3x"></i>
+            </div>
+            <h3>Reparación de Celulares</h3>
+            <p>Reparación de pantallas, baterías, y más.</p>
+        </div>
+        <div class="service" id="laptop-repair" data-modal="laptop-modal">
+            <div class="service-icon">
+                <i class="fas fa-laptop fa-3x"></i>
+            </div>
+            <h3>Reparación de Laptops</h3>
+            <p>Solución de problemas de hardware y software.</p>
+        </div>
+        <div class="service" id="speaker-repair" data-modal="speaker-modal">
+            <div class="service-icon">
+                <i class="fas fa-volume-up fa-3x"></i>
+            </div>
+            <h3>Reparación de Bocinas</h3>
+            <p>Reparación de fallos de sonido y conexiones.</p>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Modal para Reparación de Celulares -->
+<div id="phone-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reparación de Celulares</h2>
+        <p><strong>Servicios ofrecidos:</strong></p>
+        <ul class="service-list">
+            <li data-target="phone-screen-replace">Reemplazo de pantallas rotas</li>
+            <li data-target="phone-battery-change">Cambio de baterías</li>
+            <li data-target="phone-button-repair">Reparación de botones y conexiones</li>
+            <li data-target="phone-software-diagnosis">Diagnóstico y solución de problemas de software</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal para Reparación de Laptops -->
+<div id="laptop-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reparación de Laptops</h2>
+        <p><strong>Servicios ofrecidos:</strong></p>
+        <ul class="service-list">
+            <li data-target="laptop-hardware-repair">Reparación de hardware (pantalla, teclado, puertos)</li>
+            <li data-target="laptop-software-repair">Actualización y reparación de software</li>
+            <li data-target="laptop-component-replace">Reemplazo de componentes internos (HDD, RAM)</li>
+            <li data-target="laptop-performance-diagnosis">Diagnóstico de problemas de rendimiento</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal para Reparación de Celulares -->
+<div id="phone-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reparación de Celulares</h2>
+        <p><strong>Servicios ofrecidos:</strong></p>
+        <ul class="service-list">
+            <li data-target="phone-screen-replace">Reemplazo de pantallas rotas</li>
+            <li data-target="phone-battery-change">Cambio de baterías</li>
+            <li data-target="phone-button-repair">Reparación de botones y conexiones</li>
+            <li data-target="phone-software-diagnosis">Diagnóstico y solución de problemas de software</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal para Reparación de Laptops -->
+<div id="laptop-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reparación de Laptops</h2>
+        <p><strong>Servicios ofrecidos:</strong></p>
+        <ul class="service-list">
+            <li data-target="laptop-hardware-repair">Reparación de hardware (pantalla, teclado, puertos)</li>
+            <li data-target="laptop-software-repair">Actualización y reparación de software</li>
+            <li data-target="laptop-component-replace">Reemplazo de componentes internos (HDD, RAM)</li>
+            <li data-target="laptop-performance-diagnosis">Diagnóstico de problemas de rendimiento</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal para Reparación de Bocinas -->
+<div id="speaker-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reparación de Bocinas</h2>
+        <p><strong>Servicios ofrecidos:</strong></p>
+        <ul class="service-list">
+            
+            <li data-target="speaker-component-replace">Reemplazo de componentes dañados</li>
+            <li data-target="speaker-connection-issue">Solución de problemas de conexión</li>
+            
+        </ul>
+    </div>
+</div>
+
+<!-- Modales de Descripción de Servicios -->
+<div id="phone-screen-replace" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Reemplazo de Pantallas Rotas</h2>
+        <p>El reemplazo de pantallas rotas implica la extracción de la pantalla dañada y la instalación de una nueva, asegurando que todas las funciones táctiles y visuales sean completamente operativas.</p>
+    </div>
+</div>
+
+<div id="phone-battery-change" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Cambio de Baterías</h2>
+        <p>El cambio de baterías consiste en reemplazar la batería agotada o defectuosa por una nueva, mejorando la duración y rendimiento del dispositivo.</p>
+    </div>
+</div>
+
+<div id="phone-button-repair" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Reparación de Botones y Conexiones</h2>
+        <p>La reparación de botones y conexiones se centra en solucionar problemas con botones que no responden o conexiones defectuosas, garantizando un uso fluido del dispositivo.</p>
+    </div>
+</div>
+
+<div id="phone-software-diagnosis" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Diagnóstico y Solución de Problemas de Software</h2>
+        <p>Este servicio incluye el análisis del software del dispositivo para detectar y solucionar problemas que afectan su rendimiento, como bloqueos o fallos en aplicaciones.</p>
+    </div>
+</div>
+
+<div id="laptop-hardware-repair" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Reparación de Hardware (Pantalla, Teclado, Puertos)</h2>
+        <p>La reparación de hardware abarca la sustitución o reparación de componentes físicos como pantallas, teclados y puertos que han sufrido daños o fallos.</p>
+    </div>
+</div>
+
+<div id="laptop-software-repair" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Actualización y Reparación de Software</h2>
+        <p>Este servicio se encarga de actualizar el sistema operativo y las aplicaciones, así como de reparar errores que puedan estar causando problemas de rendimiento.</p>
+    </div>
+</div>
+
+<div id="laptop-component-replace" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Reemplazo de Componentes Internos (HDD, RAM)</h2>
+        <p>Se refiere al cambio de componentes internos como discos duros y memoria RAM, mejorando la capacidad y velocidad de la laptop.</p>
+    </div>
+</div>
+
+<div id="laptop-performance-diagnosis" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Diagnóstico de Problemas de Rendimiento</h2>
+        <p>Este diagnóstico ayuda a identificar problemas que afectan la velocidad y eficiencia de la laptop, ofreciendo soluciones adecuadas para optimizar su funcionamiento.</p>
+    </div>
+</div>
+
+
+
+<div id="speaker-component-replace" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Reemplazo de Componentes Dañados</h2>
+        <p>Este servicio implica cambiar componentes internos o externos dañados de la bocina para restaurar su funcionalidad y calidad de sonido.</p>
+    </div>
+</div>
+
+<div id="speaker-connection-issue" class="info-modal modal">
+    <div class="modal-content">
+        <span class="close-info">&times;</span>
+        <h2>Solución de Problemas de Conexión</h2>
+        <p>Se refiere a la identificación y solución de problemas que impiden que la bocina se conecte correctamente a otros dispositivos.</p>
+    </div>
+</div>
+
+
+
+
+<section id="about">
+    <div class="about-container">
+        <img src="img/logo.jpeg" alt="Logo A-TechServices" class="logo" />
+        <h2 id="about-title">Sobre Mi</h2>
+        <p>A-TechServices es un negocio dedicado a la reparación de dispositivos electrónicos. Ofrecemos servicios rápidos y confiables para que tus dispositivos estén siempre en óptimas condiciones.</p>
+        
+    </div>
+</section>
+
+
+    <!--ICON EN MODO MOVIL Y TABLET  HTML-->
+    <nav class="navbar navbar-expand-lg navbar-black fixed-bottom mobile-navbar">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse show" id="mobileNavbarNav">
+                <ul class="navbar-nav ms-auto d-flex flex-row justify-content-center w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"><i class="fas fa-store"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comenta.html"><i class="fas fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ICONOS DE REDES SOCIALES -->
+    <section class="social-media">
+        <div class="container text-center">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/+526981041207?text=Solicito%20información" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2024 Alan-Tech Services. Derechos reservados.</p>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+     
+    <script src="js/custom.js"></script>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1073 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos generales del encabezado */
+header {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: #fff;
+    text-align: left;
+    padding: 0.2rem;
+    position: relative; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves para el encabezado */
+}
+
+/* Contenido del header */
+.header-content {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Estilos del h1 y p */
+.header-content h1 {
+    font-size: 2rem;
+    margin: 0;
+    animation: bounceIn 2s ease-out;
+}
+
+.header-content p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Animaciones clave */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Clases para el efecto de scroll */
+.scrolled-down header {
+    transform: translateY(-100%); /* Oculta el encabezado cuando se hace scroll hacia abajo */
+    opacity: 0; /* Hace que el encabezado sea invisible */
+}
+
+.scrolled-up header {
+    transform: translateY(0); /* Muestra el encabezado cuando se hace scroll hacia arriba */
+    opacity: 1; /* Hace que el encabezado sea visible */
+}
+
+/* Adaptaciones para dispositivos móviles */
+@media (max-width: 1024px) {
+    .header-content h1 {
+        font-size: 1.5rem; /* Tamaño del texto en pantallas más pequeñas */
+        text-align: center;
+    }
+    .header-content p {
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+
+
+/* Estyles del navbar tanto en movilñes pc y tablet*/
+.navbar {
+    background: rgb(255, 255, 255); 
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+    width: auto; 
+    
+    margin: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves para el navbar */
+}
+
+
+/* Clases para el efecto de scroll en el navbar */
+.scrolled-down .navbar {
+    transform: translateY(-100%); /* Oculta el navbar cuando se hace scroll hacia abajo */
+    opacity: 0; /* Hace que el navbar sea invisible */
+}
+
+.scrolled-up .navbar {
+    transform: translateY(0); /* Muestra el navbar cuando se hace scroll hacia arriba */
+    opacity: 1; /* Hace que el navbar sea visible */
+}
+
+.navbar-nav {
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.2rem;
+    margin-left: 40px;
+    margin-right: 35px;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+.navbar-nav .nav-link:hover {
+    color: #dac50f;
+}
+
+
+/* styles de computadora */
+
+.desktop-navbar {
+    margin-left: 50%;
+    margin-right: 50px; 
+    
+}
+
+
+.desktop-navbar .nav-link i {
+    display: none; 
+}
+
+/* styles de celulares */
+
+.mobile-navbar {
+    display: none;
+    position: fixed; /* Fija la posición en la pantalla */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+    left: 0;
+    background: rgba(255, 255, 255, 0.527); /* Fondo semi-transparente */
+    color: #010101; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    padding: 5px; /* Espaciado interno */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* ajueste al nabvar en movil */
+.mobile-navbar .nav-link {
+    color: #000000;
+    font-size: 1.8rem; /* Tamaño del texto de los enlaces */
+    margin-left: 15px; /* Espaciado entre los enlaces */
+    margin-right: 15px;
+    padding: 5px; /* Espaciado interno de los enlaces */
+}
+
+/* tablet*/
+@media (max-width: 1024px) {
+    .desktop-navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: flex;
+    }
+}
+
+/* Futuristic Animations */
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc, 0 0 120px #00ffcc, 0 0 160px #00ffcc;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff, 0 0 120px #00ffff, 0 0 160px #00ffff, 0 0 200px #00ffff;
+    }
+}
+
+
+/* CSS del footer */
+
+.footer {
+    position: fixed;
+    top: -8px; /* Asegura que el footer esté en la parte inferior */
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Sin fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    text-align: left; /* Centra el texto */
+    font-size: 0.75rem; /* Tamaño de fuente adecuado para el footer */
+    z-index: 1000;
+    padding: 10px; /* Espaciado interno */
+    line-height: 1.5; /* Altura de línea */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves para el footer */
+}
+
+/* Clases para el efecto de scroll en el footer */
+.scrolled-down .footer {
+    transform: translateY(100%); /* Oculta el footer cuando se hace scroll hacia abajo */
+    opacity: 0; /* Hace que el footer sea invisible */
+}
+
+.scrolled-up .footer {
+    transform: translateY(0); /* Muestra el footer cuando se hace scroll hacia arriba */
+    opacity: 1; /* Hace que el footer sea visible */
+}
+
+
+
+
+
+/* css de las redes sociales*/
+
+.social-media {
+    position: fixed; /* Fijo en la pantalla */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); /* Centra verticalmente */
+    padding: 20px;
+    /* Elimina el fondo y la sombra del contenedor */
+    background-color: transparent;
+    /* Opcional: bordes redondeados y sombra del contenedor se eliminan */
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+/* Contenedor de íconos */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Alinea los íconos verticalmente */
+    align-items: center; /* Centra los íconos horizontalmente dentro del contenedor */
+    gap: 15px; /* Espacio entre íconos */
+    animation: slideIn 1s ease-out;
+    
+}
+
+/* Estilos individuales para los íconos */
+.social-icon {
+    display: inline-block;
+    font-size: 24px; /* Tamaño del ícono, ajusta si es necesario */
+    color: #011aa8; /* Color azul */
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Quitar subrayado */
+    /* Añadir sombreado sutil a los íconos */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    color: #f8e805; /* Color azul más oscuro para el hover/focus */
+    transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+    /* Añadir sombreado más pronunciado al pasar el cursor */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.social-icon:active {
+    color: #7a6400; /* Color azul aún más oscuro cuando se hace clic */
+    transform: scale(1.05); /* Efecto de escala al hacer clic */
+    /* Mantener el sombreado pronunciado al hacer clic */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Animación de deslizamiento */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/*css del home*/
+
+#home {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fondo con gradiente atractivo */
+    padding: 60px 20px; /* Espaciado interno para el contenido */
+    margin: 5px auto 20px; /* Separación de 80px desde el header y margen inferior */
+    border-radius: 15px;
+    border: 2px solid #ffffff; /* Borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto de profundidad */
+    color: #ffffff;
+    text-align: center; /* Centra el texto */
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+    position: relative;
+}
+/* Ajustes para dispositivos móviles */
+@media (max-width: 1024px) {
+    #home {
+        margin: 10px auto 20px; /* Ajusta el margen superior para pantallas más pequeñas */
+        padding: 40px 15px; /* Reduce el padding si es necesario para adaptarse mejor a pantallas más pequeñas */
+    }
+}
+
+/* Ajustes para dispositivos móviles más pequeños */
+@media (max-width: 600px) {
+    #home {
+        margin: 4px auto 20px; /* Ajusta el margen superior para pantallas muy pequeñas */
+        padding: 30px 10px; /* Ajusta el padding para adaptarse mejor a pantallas muy pequeñas */
+    }
+}
+
+/* Estilo del encabezado dentro de la sección #home */
+#home h2 {
+    font-size: 2rem;
+    margin: 0;
+    animation: fadeInUp 1s ease-out; /* Animación para el título */
+}
+
+/* Estilo del párrafo dentro de la sección #home */
+#home p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-out; /* Animación para el párrafo */
+}
+
+/* Estilo del botón dentro de la sección #home */
+#home #promo-btn {
+    background-color: #ffffff;
+    color: #ff7e5f;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el botón */
+    animation: bounceIn 2s ease-out; /* Animación para el botón */
+}
+
+#home #promo-btn:hover {
+    background-color: #ff7e5f;
+    color: #ffffff;
+    transform: scale(1.05); /* Efecto de zoom en hover */
+}
+
+/* Animación de entrada para el texto */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de rebote para el botón */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+/* styles de la secciones  */
+
+
+section {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos del título */
+#services-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ff5733; /* Color naranja brillante */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem; /* Tamaño de fuente aumentado */
+    animation: fadeInUp 1s ease forwards, colorChange 2s infinite alternate; /* Animaciones de entrada y cambio de color */
+    transition: transform 0.3s; /* Transición para el efecto de escalado */
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+    0% {
+        color: #ff5733; /* Color naranja brillante */
+    }
+    100% {
+        color: #000980; /* Color amarillo */
+    }
+}
+
+/* Efecto de escalado al pasar el ratón */
+#services-title:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el ratón */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Aumentar la sombra */
+}
+
+
+
+
+/* Estilos de los servicios */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.service {
+    flex: 1 1 calc(30% - 20px);
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Iconos */
+.service-icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 15px;
+    transition: transform 0.4s;
+}
+
+
+.service h3 {
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.service p {
+    color: #555;
+}
+
+/* Efectos al pasar el ratón */
+.service:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.service:hover .service-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Estilos del título */
+#services h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 calc(45% - 20px); /* Dos columnas */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        flex: 1 1 100%; /* Una columna */
+        padding: 15px;
+    }
+
+    .service-icon {
+        font-size: 40px; /* Tamaño de icono más pequeño */
+    }
+}
+
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.4s;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.close, .close-info {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #f00;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.close:hover, .close-info:hover {
+    color: #c00;
+    transform: scale(1.2);
+}
+
+/* Estilos de la lista de servicios */
+.service-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-list li {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-list li:hover {
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+}
+
+.service-list li.clicked {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .close {
+        font-size: 24px;
+    }
+}
+
+/* Estilo general para la sección de contacto */
+#contact {
+    background: linear-gradient(135deg, #f0f4f8, #e0e6ed); /* Gradiente suave de fondo */
+    padding: 80px 20px; /* Espaciado interno para el contenido */
+    margin: 130px auto 60px; /* Separación desde el encabezado y margen inferior */
+    border-radius: 20px;
+    border: 3px solid #056dce; /* Borde de color suave */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidad */
+    color: #333333; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-family: 'Arial', sans-serif;
+    max-width: 350px; /* Ancho máximo para la sección */
+    position: relative;
+}
+
+/* Estilo del encabezado dentro de la sección de contacto */
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a; /* Color oscuro para el título */
+    animation: fadeInDown 1s ease-out; /* Animación para el título */
+}
+
+/* Estilo del párrafo dentro de la sección de contacto */
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555555; /* Color gris claro para el párrafo */
+    animation: fadeInDown 1.5s ease-out; /* Animación para el párrafo */
+}
+
+/* Contenedor de íconos de contacto */
+.contact-icons {
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+    align-items: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Espacio entre íconos */
+    animation: fadeInUp 1s ease-out; /* Animación de entrada */
+}
+
+/* Estilo para los enlaces de contacto */
+.contact-link {
+    display: flex;
+    align-items: center; /* Centra el ícono y el texto verticalmente */
+    justify-content: center; /* Centra el ícono y el texto horizontalmente */
+    width: 150px; /* Tamaño fijo para todos los íconos */
+    height: 50px; /* Tamaño fijo para todos los íconos */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    color: #333333; /* Color del texto */
+    padding: 10px;
+    border-radius: 25px; /* Bordes redondeados */
+    text-decoration: none; /* Quitar subrayado */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    font-weight: 600; /* Fuente en negrita */
+    animation: pulse 1.5s infinite; /* Nueva animación */
+}
+
+/* Estilo al pasar el cursor sobre los enlaces de contacto */
+.contact-link:hover,
+.contact-link:focus {
+    background: #ffffff; /* Fondo más brillante */
+    color: #1a1a1a; /* Color del texto más oscuro */
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Animación de desvanecimiento y bajada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de desvanecimiento y subida */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nueva animación de pulso */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #contact {
+        margin: 25px auto 40px; /* Menos margen superior en pantallas pequeñas */
+        padding: 40px 15px; /* Ajusta el espaciado interno para pantallas pequeñas */
+    }
+
+    #contact h2 {
+        font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    #contact p {
+        font-size: 1rem; /* Ajusta el tamaño de fuente del párrafo en pantallas pequeñas */
+    }
+
+    .contact-link {
+        font-size: 1rem; /* Ajusta el tamaño de fuente de los enlaces en pantallas pequeñas */
+        padding: 8px 16px; /* Ajusta el relleno en pantallas pequeñas */
+    }
+}
+
+/* Estilo específico para el ícono de WhatsApp */
+.contact-link.whatsapp {
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: #ffffff; /* Color del texto blanco */
+}
+
+/* Estilo al pasar el cursor sobre el enlace de WhatsApp */
+.contact-link.whatsapp:hover,
+.contact-link.whatsapp:focus {
+    background-color: #128C7E; /* Color verde más oscuro de WhatsApp */
+}
+
+/* Estilo cuando se hace clic en el enlace de WhatsApp */
+.contact-link.whatsapp:active {
+    background-color: #075E54; /* Color verde aún más oscuro */
+}
+
+/* Estilo específico para el ícono de Correo Electrónico */
+.contact-link.email {
+    background-color: #F7E8A4; /* Color amarillo para el correo electrónico */
+    color: #333333; /* Color del texto oscuro */
+}
+
+/* Estilo al pasar el cursor sobre el enlace de Correo Electrónico */
+.contact-link.email:hover,
+.contact-link.email:focus {
+    background-color: #F2C400; /* Color amarillo más oscuro */
+}
+
+/* Estilo cuando se hace clic en el enlace de Correo Electrónico */
+.contact-link.email:active {
+    background-color: #E1A800; /* Color amarillo aún más oscuro */
+}
+
+/* Estilo específico para el ícono de Teléfono */
+.contact-link.phone {
+    background-color: #4A90E2; /* Color azul para el teléfono */
+    color: #ffffff; /* Color del texto blanco */
+}
+
+/* Estilo al pasar el cursor sobre el enlace de Teléfono */
+.contact-link.phone:hover,
+.contact-link.phone:focus {
+    background-color: #357ABD; /* Color azul más oscuro */
+}
+
+/* Estilo cuando se hace clic en el enlace de Teléfono */
+.contact-link.phone:active {
+    background-color: #2C6B9D; /* Color azul aún más oscuro */
+}
+
+
+
+
+/*CSS DE SHOP*/
+/* Estilos generales de la sección */
+.section {
+    background-color: #f8f9fa;
+    padding-top: 60px; /* Espacio desde el header */
+    padding-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de parallax y desenfoque en el fondo */
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path-to-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(15px);
+    z-index: -1;
+    transform: scale(1.1); /* Asegura que el fondo cubra toda el área */
+}
+
+/* Estilo para el contenedor de tarjetas de producto */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    will-change: transform, box-shadow;
+    z-index: 1; /* Asegura que la tarjeta esté encima del fondo borroso */
+}
+
+/* Estilo para la imagen del producto */
+.card-img-top {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Efecto de zoom y filtro en la imagen del producto al pasar el mouse */
+.card:hover .card-img-top {
+    transform: scale(1.3);
+    filter: brightness(50%) blur(4px);
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el título del producto */
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Cambiar color del título al pasar el mouse */
+.card:hover .card-title {
+    color: #ffd700; /* Oro */
+}
+
+/* Estilo para la descripción breve del producto */
+.card-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para el precio del producto */
+.card-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el botón de compra */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Estilo para el contenedor de detalles del producto */
+.product-details {
+    display: none; /* Oculto por defecto */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    border-top: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 0; /* Inicialmente no visible */
+    overflow: hidden;
+    transition: max-height 0.6s ease, padding 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Mostrar el contenedor de detalles cuando se activa */
+.product-card.active .product-details {
+    display: block;
+    max-height: 400px; /* Tamaño máximo que el contenido puede expandirse */
+    opacity: 1;
+    transform: translateY(0);
+    animation: expand 0.6s ease-out forwards;
+}
+
+/* Estilo para ocultar la imagen cuando se activa el contenido adicional */
+.product-card.active .card-img-top {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* Estilo para el contenedor del producto */
+.product-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Efecto de deslizamiento de fondo cuando el mouse pasa sobre la tarjeta */
+.product-card:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+}
+
+/* Animación de expansión para detalles */
+@keyframes expand {
+    from {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        max-height: 400px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/*css sobre mi*/
+/* Estilos para la sección "Sobre Mi" */
+#about {
+    background-color: #f0f4f8; /* Color de fondo suave */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: #ffffff; /* Fondo blanco */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    position: relative; /* Para efectos absolutos */
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 180px; /* Ancho del logo */
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease forwards; /* Animación de entrada */
+}
+
+/* Estilo del título */
+#about-title {
+    color: #ff5733; /* Color atractivo */
+    font-size: 2.8rem; /* Tamaño grande */
+    margin-bottom: 15px;
+    animation: bounceIn 1s ease forwards; /* Animación de entrada */
+}
+
+/* Estilo del párrafo */
+#about p {
+    color: #666; /* Color del texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    animation: fadeInUp 1s ease forwards; /* Animación de entrada */
+}
+
+/* Estilo del botón */
+#learn-more {
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Efectos al pasar el ratón sobre el botón */
+#learn-more:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+}
+
+/* Efectos al pasar el ratón sobre el contenedor */
+.about-container:hover {
+    transform: translateY(-5px); /* Levantar ligeramente */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Aumentar sombra */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

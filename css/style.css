@@ -27,11 +27,3 @@ img {
      width: 280px;
 }
 
-h1{
-     height: 25%;
-     width: 100%;
-     color: blueviolet;
-     display: flex;
-     justify-content: center;
-     align-items: center;  
-}

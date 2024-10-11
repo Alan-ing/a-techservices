@@ -1,0 +1,1 @@
+.loader,.loader_bg{height:100%;width:100%}img{max-width:100%;height:auto}.loader_bg{position:fixed;z-index:9999999;background:#fff}.loader{position:absolute;left:0;top:0;display:flex;justify-content:center;align-items:center}.loader img{width:280px}
